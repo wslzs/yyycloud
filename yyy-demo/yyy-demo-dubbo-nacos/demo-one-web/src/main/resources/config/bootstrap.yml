@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /yyy
+spring:
+  application:
+    name: demo-one-web-local
+  profiles:
+    active: local
+
+
+---
+# local环境配置
+spring:
+  config:
+    activate:
+      on-profile: local
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        group: ${spring.profiles.active}
+        file-extension: yaml
+        namespace: yyy-demo-one
+      discovery:
+        enabled: true
+        register-enabled: true
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        namespace: ${spring.profiles.active}
+        group: ${spring.profiles.active}
+
+
