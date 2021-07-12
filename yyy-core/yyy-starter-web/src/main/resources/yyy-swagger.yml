@@ -1,0 +1,27 @@
+#Swagger属性配置
+mate:
+  swagger:
+    enable: false
+    title: YyyCLoud文档管理中心
+    description: YyyCloud文档管理
+    license: Powered by YyyCloud
+    service-url: https://com.yyy.com
+    contact-name: wangshilin
+    contact-url: https://yyy.vip/#/docs
+    contact-email: wsl90@qq.com
+# knife4j配置
+knife4j:
+  enable: ${mate.swagger.enable}
+  # 开启生产环境屏蔽
+  production: false
+  basic:
+    enable: true
+    username: admin
+    password: yyycloud
+  setting:
+    # 是否不显示Knife4j默认的footer，默认为true(显示)
+    enableFooter: false
+    # 是否自定义Footer，默认为false(非自定义)
+    enableFooterCustom: true
+    # 自定义Footer内容,支持Markdown语法
+    footerCustomContent: Apache License 2.0 | Copyright  2021-[北京道XXX科技有限公司](https://gitee.com/yyy/yyycloud)
