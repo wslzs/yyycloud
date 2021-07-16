@@ -20,6 +20,7 @@
         <module>yyy-demo-dubbo-nacos</module>
         <module>yyy-demo-xxl-job</module>
         <module>yyy-demo-dao</module>
+        <module>yyy-demo-redis</module>
     </modules>
 
 </project>
