@@ -8,6 +8,7 @@ import com.yyy.service.TestService;
 import org.apache.dubbo.config.annotation.DubboService;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,6 +30,12 @@ public class TestServiceImpl implements TestService {
     @Override
     public List<UserTestDto> testQueryAll() {
         List<UserTest> list = userTestMapper.queryAll();
-        return BeanUtil.copyToList(list, UserTestDto.class);
+        List<UserTestDto> result = new ArrayList<>();
+        for (UserTest userTest: list) {
+            UserTestDto userTestDto = new UserTestDto();
+            BeanUtil.copyProperties(userTest,userTestDto);
+            result.add(userTestDto);
+        }
+        return result;
     }
 }
