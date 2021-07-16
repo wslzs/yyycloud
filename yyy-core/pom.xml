@@ -18,6 +18,8 @@
         <module>yyy-starter-dependencies</module>
         <module>yyy-starter-xxl-job</module>
         <module>yyy-starter-web</module>
+        <module>yyy-starter-common</module>
+        <module>yyy-starter-redis</module>
     </modules>
 
     <dependencies>
