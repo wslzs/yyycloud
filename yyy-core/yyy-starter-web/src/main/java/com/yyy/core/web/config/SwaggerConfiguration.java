@@ -57,15 +57,15 @@ public class SwaggerConfiguration implements WebMvcConfigurer {
 
     private final YyySwaggerProperties swaggerProperties;
 
-    @Bean
-    public PathProvider pathProvider() {
-        return new DefaultPathProvider() {
-            @Override
-            public String getOperationPath(String operationPath) {
-                return super.getOperationPath(operationPath);
-            }
-        };
-    }
+//    @Bean
+//    public PathProvider pathProvider() {
+//        return new DefaultPathProvider() {
+//            @Override
+//            public String getOperationPath(String operationPath) {
+//                return super.getOperationPath(operationPath);
+//            }
+//        };
+//    }
 
     /**
      * Swagger忽略的参数类型
@@ -100,7 +100,7 @@ public class SwaggerConfiguration implements WebMvcConfigurer {
                 .enable(swaggerProperties.isEnable())
                 .securitySchemes(securitySchemes())
                 .securityContexts(securityContexts())
-                .pathProvider(pathProvider())
+//                .pathProvider(pathProvider())
                 .ignoredParameterTypes(ignoredParameterTypes)
                 .pathMapping("/");
     }
