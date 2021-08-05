@@ -24,7 +24,7 @@
         <spring.cloud.version>2020.0.3</spring.cloud.version>
 
         <dubbo.version>3.0.1</dubbo.version>
-        <nacos.client.version>2.0.2</nacos.client.version>
+        <nacos.client.version>2.0.3</nacos.client.version>
 
         <mybatis.version>2.2.0</mybatis.version>
         <mysql.version>8.0.25</mysql.version>
