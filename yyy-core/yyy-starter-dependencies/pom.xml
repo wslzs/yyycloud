@@ -28,7 +28,7 @@
 
         <mybatis.version>2.2.0</mybatis.version>
         <mysql.version>8.0.25</mysql.version>
-        <druid.version>1.2.6</druid.version>
+        <druid.version>1.2.5</druid.version>
 
         <hutool.version>5.6.3</hutool.version>
         <jjwt.version>0.9.1</jjwt.version>
