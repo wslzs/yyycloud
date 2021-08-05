@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: spring-cloud-alibaba-gateway
+  cloud:
+    config:
+      override-none: true
+  profiles:
+    active: local
+---
+# springboot2.4之后的版本需采用spring.config.activate.on-profile=local
+spring:
+  application:
+    name: spring-cloud-alibaba-gateway
+  config:
+    activate:
+      on-profile: local
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: yyy-demo-spring-cloud-alibaba
+        group: ${spring.profiles.active}
+        file-extension: yaml
+      discovery:
+        enabled: true
+        register-enabled: true
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        namespace: ${spring.profiles.active}
+        group: ${spring.profiles.active}
+---
+spring:
+  application:
+    name: spring-cloud-alibaba-gateway
+  config:
+    activate:
+      on-profile: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.2:8848
+        namespace: yyy-demo-spring-cloud-alibaba
+        group: ${spring.profiles.active}
+        file-extension: yaml
+      discovery:
+        enabled: true
+        register-enabled: true
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        namespace: ${spring.profiles.active}
+        group: ${spring.profiles.active}

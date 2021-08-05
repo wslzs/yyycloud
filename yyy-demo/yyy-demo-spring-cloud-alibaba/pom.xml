@@ -4,24 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.yyy</groupId>
-        <artifactId>yyycloud</artifactId>
+        <artifactId>yyy-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
 
-    <artifactId>yyy-demo</artifactId>
+    <artifactId>yyy-demo-spring-cloud-alibaba</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>yyy-code</name>
+    <name>yyy-demo-spring-cloud-alibaba</name>
+    <description>yyy-demo-spring-cloud-alibaba</description>
     <packaging>pom</packaging>
-
     <modules>
-        <module>yyy-demo-dubbo-nacos</module>
-        <module>yyy-demo-xxl-job</module>
-        <module>yyy-demo-dao</module>
-        <module>yyy-demo-redis</module>
-        <module>yyy-demo-spring-cloud-alibaba</module>
+        <module>spring-cloud-alibaba-provider</module>
+        <module>spring-cloud-alibaba-consumer-feign</module>
     </modules>
-
 </project>
