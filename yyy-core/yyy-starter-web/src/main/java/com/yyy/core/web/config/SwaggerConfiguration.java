@@ -43,29 +43,17 @@ import java.util.Map;
 /**
  * Swagger配置类，提供给WEB服务使用
  *
- * @author pangu
+ * @author wangshilin
  * 2021-7-5
  */
 @Configuration
 @EnableSwagger2WebMvc
 @AllArgsConstructor
-//@Profile({"!prod"})
-//@Import(BeanValidatorPluginsConfiguration.class)
 @EnableConfigurationProperties(YyySwaggerProperties.class)
 @PropertySource(factory = YamlPropertySourceFactory.class, value = "classpath:yyy-swagger.yml")
 public class SwaggerConfiguration implements WebMvcConfigurer {
 
     private final YyySwaggerProperties swaggerProperties;
-
-//    @Bean
-//    public PathProvider pathProvider() {
-//        return new DefaultPathProvider() {
-//            @Override
-//            public String getOperationPath(String operationPath) {
-//                return super.getOperationPath(operationPath);
-//            }
-//        };
-//    }
 
     /**
      * Swagger忽略的参数类型

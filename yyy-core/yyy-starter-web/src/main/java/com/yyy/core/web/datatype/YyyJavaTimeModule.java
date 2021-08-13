@@ -17,7 +17,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * 时间模型处理
  *
- * @author pangu
+ * @author wangshilin
  */
 public class YyyJavaTimeModule extends SimpleModule {
 	public static final String PATTERN_DATETIME = "yyyy-MM-dd HH:mm:ss";

@@ -21,7 +21,8 @@ import java.util.Properties;
 public class YamlPropertySourceFactory implements PropertySourceFactory {
 
     @NotNull
-    public PropertySource<?> createPropertySource(String name, EncodedResource resource) throws IOException {
+    @Override
+    public PropertySource<?> createPropertySource(String name, @NotNull EncodedResource resource) throws IOException {
         Properties propertiesFromYaml = loadYamlIntoProperties(resource);
         String sourceName = name != null ? name : resource.getResource().getFilename();
         assert sourceName != null;

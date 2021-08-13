@@ -100,9 +100,11 @@ public class BaseExceptionHandler {
     public Result<?> handleException(Exception ex) {
         log.error("程序异常：" + ex.toString());
         String message = ex.getMessage();
-        if (StringUtils.contains(message, "Bad credentials")) {
+        String str = "Bad credentials";
+        String internalAuthenticationServiceException = "InternalAuthenticationServiceException";
+        if (StringUtils.contains(message, str)) {
             message = "您输入的密码不正确";
-        } else if (StringUtils.contains(ex.toString(), "InternalAuthenticationServiceException")) {
+        } else if (StringUtils.contains(ex.toString(), internalAuthenticationServiceException)) {
             message = "您输入的用户名不存在";
         }
         return Result.fail(HttpStatus.INTERNAL_SERVER_ERROR.value(), message);

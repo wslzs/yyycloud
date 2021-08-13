@@ -13,5 +13,10 @@ import java.util.List;
  */
 @Mapper
 public interface UserTestMapper {
+    /**
+     * test
+     *
+     * @return List
+     */
     List<UserTest> queryAll();
 }

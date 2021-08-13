@@ -12,7 +12,17 @@ import java.util.List;
  * @date 2021/4/28
  */
 public interface TestService {
+    /**
+     * test
+     *
+     * @return String
+     */
     String test();
 
+    /**
+     * test
+     *
+     * @return List
+     */
     List<UserTestDto> testQueryAll();
 }

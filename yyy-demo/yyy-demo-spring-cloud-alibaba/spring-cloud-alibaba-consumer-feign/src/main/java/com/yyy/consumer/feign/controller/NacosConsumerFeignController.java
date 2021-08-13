@@ -4,6 +4,9 @@ import com.yyy.consumer.feign.service.FeignService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author wangshilin
+ */
 @RestController
 public class NacosConsumerFeignController {
 

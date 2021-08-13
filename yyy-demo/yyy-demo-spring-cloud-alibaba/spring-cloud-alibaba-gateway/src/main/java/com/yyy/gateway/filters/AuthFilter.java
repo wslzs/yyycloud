@@ -17,6 +17,7 @@ import java.util.Map;
 
 /**
  * 鉴权过滤器
+ * @author wangshilin
  */
 @Component
 public class AuthFilter implements GlobalFilter, Ordered {

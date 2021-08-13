@@ -39,7 +39,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 定义常用的 Redis操作
  *
- * @author xuzhanfu
+ * @author wangshilin
  * @date 2019-10-11 19:02
  **/
 @Slf4j
@@ -676,7 +676,7 @@ public class RedisService {
 	 * @param valueSerializer 序列化
 	 * @return the list
 	 */
-	public List<Object> getList(String key, int start, int end, RedisSerializer<Object> valueSerializer) {
+	public List<?> getList(String key, int start, int end, RedisSerializer<Object> valueSerializer) {
 		byte[] rawKey = rawKey(key);
 		return redisTemplate.execute(connection -> deserializeValues(connection.lRange(rawKey, start, end), valueSerializer), true);
 	}
@@ -699,7 +699,7 @@ public class RedisService {
 		return valueSerializer.serialize(value);
 	}
 
-	private List deserializeValues(List<byte[]> rawValues, RedisSerializer<Object> valueSerializer) {
+	private List<?> deserializeValues(List<byte[]> rawValues, RedisSerializer<Object> valueSerializer) {
 		if (valueSerializer == null) {
 			return rawValues;
 		}

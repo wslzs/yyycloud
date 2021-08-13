@@ -22,7 +22,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 /**
  * Redis基础配置类
  *
- * @author pangu
+ * @author wangshilin
  */
 @Configuration
 @EnableConfigurationProperties(YyyRedisProperties.class)
