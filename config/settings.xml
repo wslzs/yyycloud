@@ -148,8 +148,14 @@ under the License.
             <id>aliyunmaven</id>
             <mirrorOf>*</mirrorOf>
             <name>阿里云公共仓库</name>
-            <url>https://maven.aliyun.com/repository/public</url>
+            <url>https://maven.aliyun.com/nexus/content/groups/public</url>
         </mirror>
+<!--        <mirror>-->
+<!--            <id>nexus</id>-->
+<!--            <name>internal nexus repository</name>-->
+<!--            <url>http://repo.maven.apache.org/maven2</url>-->
+<!--            <mirrorOf>central</mirrorOf>-->
+<!--        </mirror>-->
     </mirrors>
     <!-- mirror
      | Specifies a repository mirror site to use instead of a given repository. The repository that
@@ -186,6 +192,22 @@ under the License.
      |
      |-->
     <profiles>
+<!--        <profile>-->
+<!--            <id>jdk-1.8</id>-->
+<!--            <repositories>-->
+<!--                <repository>-->
+<!--                    <id>nexus-aliyun</id>-->
+<!--                    <name>nexus-aliyun</name>-->
+<!--                    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+<!--                    <releases>-->
+<!--                        <enabled>true</enabled>-->
+<!--                    </releases>-->
+<!--                    <snapshots>-->
+<!--                        <enabled>false</enabled>-->
+<!--                    </snapshots>-->
+<!--                </repository>-->
+<!--            </repositories>-->
+<!--        </profile>-->
         <!-- profile
          | Specifies a set of introductions to the build process, to be activated using one or more of the
          | mechanisms described above. For inheritance purposes, and to activate profiles via <activatedProfiles/>
