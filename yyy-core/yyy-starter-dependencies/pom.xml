@@ -30,7 +30,7 @@
         <mysql.version>8.0.25</mysql.version>
         <druid.version>1.2.5</druid.version>
 
-        <hutool.version>5.6.3</hutool.version>
+        <hutool.version>5.7.8</hutool.version>
         <jjwt.version>0.9.1</jjwt.version>
         <lombok.version>1.18.20</lombok.version>
 
@@ -101,11 +101,6 @@
                 <version>${druid.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
             <!-- JWT -->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
