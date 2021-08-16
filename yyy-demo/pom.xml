@@ -22,6 +22,7 @@
         <module>yyy-demo-dao</module>
         <module>yyy-demo-redis</module>
         <module>yyy-demo-spring-cloud-alibaba</module>
+        <module>yyy-demo-spring-cloud</module>
     </modules>
 
 </project>
