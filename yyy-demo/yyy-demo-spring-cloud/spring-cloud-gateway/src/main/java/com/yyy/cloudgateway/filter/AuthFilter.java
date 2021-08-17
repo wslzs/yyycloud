@@ -1,8 +1,7 @@
-package com.yyy.cloud.gateway.filter;
+package com.yyy.cloudgateway.filter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.Maps;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
@@ -13,10 +12,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
  * 鉴权过滤器
+ *
  * @author wangshilin
  */
 @Component
@@ -29,7 +30,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
             ServerHttpResponse response = exchange.getResponse();
 
             // 封装错误信息
-            Map<String, Object> responseData = Maps.newHashMap();
+            Map<String, Object> responseData = new HashMap<>();
             responseData.put("code", 401);
             responseData.put("message", "非法请求");
             responseData.put("cause", "Token is empty");

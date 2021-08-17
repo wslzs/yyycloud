@@ -1,4 +1,4 @@
-package com.yyy.cloud.gateway;
+package com.yyy.cloudgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
