@@ -11,9 +11,9 @@ spring:
           predicates:
             - Method=GET,POST         # Method 方法谓词，这里是匹配 GET 和 POST 请求
         - id: gateway-provider  # 路由ID，命名随意，保证唯一性就可以
-            uri: lb://provider    # 采用 LoadBalanceClient 方式请求，以 lb:// 开头，后面的是注册在eureka上的服务名
-            predicates:
-              - Method=GET,POST         # Method 方法谓词，这里是匹配 GET 和 POST 请求
+          uri: lb://provider    # 采用 LoadBalanceClient 方式请求，以 lb:// 开头，后面的是注册在eureka上的服务名
+          predicates:
+            - Method=GET,POST         # Method 方法谓词，这里是匹配 GET 和 POST 请求
 eureka:
   client:
     service-url:
